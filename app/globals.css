@@ -10,7 +10,7 @@
 
 ::selection {
   background: transparent;
-  text-shadow: 1px 1px 1px #FFDE00;
+  text-shadow: 2px 2px 2px #ffdd00;
 }
 
 .spoiler:hover {
@@ -29,4 +29,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #d2001a;
   outline: 1px solid slategrey;
+}
+
+body {
+  overflow-x: hidden;
 }

@@ -15,6 +15,7 @@ import {
   Icon,
   Heading,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { FaCode } from "react-icons/fa";
 import Footer from "@/components/Footer";
 interface CardProps {
@@ -90,7 +91,9 @@ const CoursesSec = () => {
       {articles.map((article, index) => (
         <Flex key={index} mb="10px">
           <LineWithDot />
-          <Card {...article} />
+          <motion.div whileHover={{ scale: 0.9 }}>
+            <Card {...article} />
+          </motion.div>
         </Flex>
       ))}
     </Container>

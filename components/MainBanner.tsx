@@ -1,4 +1,5 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 import {
   chakra,
   Container,
@@ -106,7 +107,7 @@ const MainBanner = () => {
                 opacity: 0.9,
               }}
             >
-              <chakra.span> Courses We Offer </chakra.span>
+              <Link href="/Courses"> Courses We Offer </Link>
               <Icon as={BsFillBookmarkFill} h={4} w={4} ml={1} />
             </chakra.button>
             <Box
@@ -128,15 +129,25 @@ const MainBanner = () => {
         </Stack>
         <Box ml={{ base: 0, md: 5 }} pos="relative">
           <DottedBox />
-          <Image
-            w={400}
-            h="100%"
-            minW={{ base: "auto", md: "30rem" }}
-            objectFit="cover"
-            src={`https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=800`}
-            rounded="md"
-            fallback={<Skeleton />}
-          />
+          <motion.div
+            initial={{ rotate: -3 }}
+            animate={{ rotate: 3 }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
+            <Image
+              w={400}
+              h="100%"
+              minW={{ base: "auto", md: "30rem" }}
+              objectFit="cover"
+              src={`https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=800`}
+              rounded="md"
+              fallback={<Skeleton />}
+            />
+          </motion.div>
         </Box>
       </Stack>
     </Container>

@@ -9,6 +9,7 @@ import {
   Heading,
   chakra,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 // Here we have used react-icons package for the icon
 import { FaQuoteRight } from "react-icons/fa";
 interface TestimonialAttributes {
@@ -85,6 +86,7 @@ const HomeStudentFB = () => {
             {testimonial.username}
           </Text>
         </Stack>
+
         <Avatar
           name="avatar"
           src={testimonial.image}

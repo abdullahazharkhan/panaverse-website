@@ -13,6 +13,7 @@ import { ReactNode } from "react";
 import { BsPerson } from "react-icons/bs";
 import { FiServer } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
+import { motion } from "framer-motion";
 
 interface StatsCardProps {
   title: string;
@@ -53,41 +54,47 @@ function StatsCard(props: StatsCardProps) {
 
 export default function HomeIntro() {
   return (
-    <Box
-      maxW="7xl"
-      mx={"auto"}
-      pt={5}
-      px={{ base: 2, sm: 12, md: 20 }}
-      mb="60px"
+    <motion.div
+      initial={{ x: 100 }}
+      whileInView={{ x: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <chakra.h1
-        textAlign={"center"}
-        fontSize={"4xl"}
-        py={10}
-        fontWeight={"bold"}
+      <Box
+        maxW="7xl"
+        mx={"auto"}
+        pt={5}
+        px={{ base: 2, sm: 12, md: 20 }}
+        mb="60px"
       >
-        <Heading color={"red.500"} fontWeight={"bold"} fontSize="5xl">
-          Panaverse
-        </Heading>
-        Decentralized Autonomous Organization
-      </chakra.h1>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-        <StatsCard
-          title={"Members"}
-          stat={"3,500+"}
-          icon={<BsPerson size={"3em"} />}
-        />
-        <StatsCard
-          title={"Programs"}
-          stat={"5+"}
-          icon={<FiServer size={"3em"} />}
-        />
-        <StatsCard
-          title={"Cities"}
-          stat={"4+"}
-          icon={<GoLocation size={"3em"} />}
-        />
-      </SimpleGrid>
-    </Box>
+        <chakra.h1
+          textAlign={"center"}
+          fontSize={"4xl"}
+          py={10}
+          fontWeight={"bold"}
+        >
+          <Heading color={"red.500"} fontWeight={"bold"} fontSize="5xl">
+            Panaverse
+          </Heading>
+          Decentralized Autonomous Organization
+        </chakra.h1>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+          <StatsCard
+            title={"Members"}
+            stat={"3,500+"}
+            icon={<BsPerson size={"3em"} />}
+          />
+          <StatsCard
+            title={"Programs"}
+            stat={"5+"}
+            icon={<FiServer size={"3em"} />}
+          />
+          <StatsCard
+            title={"Cities"}
+            stat={"4+"}
+            icon={<GoLocation size={"3em"} />}
+          />
+        </SimpleGrid>
+      </Box>
+    </motion.div>
   );
 }

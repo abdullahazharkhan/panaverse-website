@@ -9,7 +9,7 @@ import {
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
-
+import { motion } from "framer-motion";
 interface IFeature {
   heading: string;
   content: string;
@@ -218,39 +218,41 @@ const Features = () => {
         mb={4}
       >
         {features.map((feature, index) => (
-          <Box
-            key={index}
-            bg={useColorModeValue("gray.100", "gray.700")}
-            p={6}
-            rounded="lg"
-            textAlign="center"
-            pos="relative"
-          >
-            <Flex
-              p={2}
-              w="max-content"
-              color="white"
-              bgGradient="linear(to-l, red.300,#D2001A)"
-              rounded="md"
-              marginInline="auto"
-              pos="absolute"
-              left={0}
-              right={0}
-              top="-1.5rem"
-              boxShadow="lg"
+          <motion.div whileHover={{ scale: 0.9 }}>
+            <Box
+              key={index}
+              bg={useColorModeValue("gray.100", "gray.700")}
+              p={6}
+              rounded="lg"
+              textAlign="center"
+              pos="relative"
             >
-              {feature.icon}
-            </Flex>
-            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
-              {feature.heading}
-            </chakra.h3>
-            <Text fontSize="md" mt={4}>
-              {feature.content}
-            </Text>
-            <Link href={"/Courses"} mt={4} fontSize="sm" color="red.500">
-              Learn more →
-            </Link>
-          </Box>
+              <Flex
+                p={2}
+                w="max-content"
+                color="white"
+                bgGradient="linear(to-l, red.300,#D2001A)"
+                rounded="md"
+                marginInline="auto"
+                pos="absolute"
+                left={0}
+                right={0}
+                top="-1.5rem"
+                boxShadow="lg"
+              >
+                {feature.icon}
+              </Flex>
+              <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                {feature.heading}
+              </chakra.h3>
+              <Text fontSize="md" mt={4}>
+                {feature.content}
+              </Text>
+              <Link href={"/Courses"} mt={4} fontSize="sm" color="red.500">
+                Learn more →
+              </Link>
+            </Box>
+          </motion.div>
         ))}
       </SimpleGrid>
     </Container>

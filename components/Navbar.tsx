@@ -59,7 +59,7 @@ export default function Navbar() {
         borderRadius={10}
         boxShadow="md"
         position={"sticky"}
-        top={"12px"}
+        top={"20px"}
         bg={useColorModeValue("#EFEFEF", "gray.900")}
         px={4}
       >
@@ -67,7 +67,6 @@ export default function Navbar() {
           <IconButton
             color={"#D2001A"}
             bg="#EFEFEF"
-            border={"2px"}
             borderColor={"#D2001A"}
             size={"lg"}
             _hover={{
@@ -88,7 +87,7 @@ export default function Navbar() {
               align={"center"}
               borderRadius={"100%"}
               bg="#EFEFEF"
-              mt={"40px"}
+              mt={"20px"}
             >
               <Link href="/">
                 <Image
@@ -145,7 +144,7 @@ export default function Navbar() {
                   }
                 />
               </MenuButton>
-              <MenuList bg={"#EFEFEF"}>
+              <MenuList zIndex={11} bg={"#EFEFEF"}>
                 <MenuItem bg={"#EFEFEF"} color={"#D2001A"}>
                   {" "}
                   <LinkIcon /> &nbsp;

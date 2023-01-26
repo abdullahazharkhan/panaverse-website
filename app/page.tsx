@@ -9,6 +9,7 @@ import HomeIntro from "@/components/HomeIntro";
 import HomeProgram from "@/components/HomeProgram";
 import HomeStudentFB from "@/components/HomeStudentFB";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,13 +21,31 @@ export default function Home() {
       <hr />
       <HomeIntro />
       <hr />
-      <HomeProgram />
-      {/* #D2001A */}
+      <motion.div
+        initial={{ x: -50 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <HomeProgram />
+      </motion.div>
       <hr />
-      <HomeFeatures />
+      <motion.div
+        initial={{ x: 50 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <HomeFeatures />
+      </motion.div>
       <hr />
-      <HomeObjct />
+      <motion.div
+        initial={{ x: -50 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <HomeObjct />
+      </motion.div>
       <hr />
+
       <HomeStudentFB />
       <hr />
       <Footer />

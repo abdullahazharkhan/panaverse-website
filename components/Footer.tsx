@@ -56,7 +56,7 @@ const accounts = [
 
 const Footer = () => {
   return (
-    <Box>
+    <Box bg={"gray.50"}>
       <Stack
         maxW="6xl"
         marginInline="auto"
