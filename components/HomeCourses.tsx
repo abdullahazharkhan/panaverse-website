@@ -17,7 +17,7 @@ interface IFeature {
   link: string;
 }
 
-const features: IFeature[] = [
+const features: any[] = [
   {
     heading: "Web 3.0",
     content:
@@ -218,10 +218,9 @@ const Features = () => {
         mb={4}
       >
         {features.map((feature, index) => (
-          <motion.div whileHover={{ scale: 0.9 }}>
+          <motion.div whileHover={{ scale: 0.95 }} key={index}>
             <Box
-              key={index}
-              bg={useColorModeValue("gray.100", "gray.700")}
+              bg={"gray.100"}
               p={6}
               rounded="lg"
               textAlign="center"

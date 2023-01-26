@@ -35,7 +35,7 @@ const Banner = () => {
         <chakra.h2 fontSize="md" lineHeight={1.5} fontWeight="semibold">
           In this brand-new type of curriculum, students will learn how to make
           money and boost exports in the classroom and will begin doing so
-          within six months of the program's beginning. It resembles a cross
+          within six months of the program&apos;s beginning. It resembles a cross
           between a corporate venture and an educational project.
         </chakra.h2>
       </Box>
