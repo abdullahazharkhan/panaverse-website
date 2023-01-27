@@ -59,7 +59,7 @@ const HomeStudentFB = () => {
         />
         <Stack direction="column" spacing={5}>
           <Text color="gray.500">
-            As a student, I have found this course to be very beneficial to my
+            As a student, I have found this course to be very good to my
             learning and professional development. One of the things I
             appreciate most about this course is the relevance of the material
             to my field of study. The course content is directly applicable to
@@ -69,12 +69,9 @@ const HomeStudentFB = () => {
             critically. The workload was well-balanced, and I felt that the
             assignments were challenging but achievable.The quality of
             instruction was excellent, the instructor was knowledgeable,
-            engaging, and given clear explanations. The instructor was always
-            available and willing to help, which made the learning experience
-            much more enjoyable. The technical support given for the course was
-            also very helpful. The support team was quick to respond to any
-            issues I had and given clear and concise instructions for resolving
-            them.
+            engaging, and given clear explanations. The support team was quick
+            to respond to any issues I had and given clear and concise
+            instructions for resolving them.
           </Text>
 
           <Text
