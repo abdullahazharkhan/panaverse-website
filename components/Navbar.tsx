@@ -26,7 +26,7 @@ import {
 } from "@chakra-ui/icons";
 import Image from "next/image";
 import { TbBrandGithub } from "react-icons/tb";
-
+import { motion } from "framer-motion";
 const Links = ["Courses", "About"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
@@ -84,21 +84,27 @@ export default function Navbar() {
               rounded="md"
               justify={"center"}
               zIndex={10}
+              display={{ base: "none", md: "flex", lg: "flex" }}
               align={"center"}
               borderRadius={"100%"}
               bg="#EFEFEF"
               mt={"20px"}
             >
-              <Link href="/">
-                <Image
-                  src={
-                    "https://avatars.githubusercontent.com/u/99120681?s=280&v=4"
-                  }
-                  alt="logo"
-                  height={150}
-                  width={150}
-                />
-              </Link>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ type: "spring", duration: 3, bounce: 0.5 }}
+              >
+                <Link href="/">
+                  <Image
+                    src={
+                      "https://avatars.githubusercontent.com/u/99120681?s=280&v=4"
+                    }
+                    alt="logo"
+                    height={150}
+                    width={150}
+                  />
+                </Link>
+              </motion.div>
             </Flex>
             <HStack
               as={"nav"}

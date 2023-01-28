@@ -31,7 +31,7 @@ const statData: StatData[] = [
   },
   {
     label: "Followers on Twitter",
-    score: "17k",
+    score: "1.5K+",
   },
 ];
 
@@ -50,7 +50,7 @@ const HomeObjct = () => {
       >
         <Stack spacing={4}>
           <chakra.h1 fontSize="3xl" lineHeight={1.2} fontWeight="bold">
-            Our Ultimate  Goal
+            Our Ultimate Goal
           </chakra.h1>
           <Text fontSize="md" color="gray.400" maxW="480px">
             The mission of{" "}
@@ -66,7 +66,9 @@ const HomeObjct = () => {
             {planList.map((data, index) => (
               <HStack key={index} alignItems="center" spacing={1} fontSize="md">
                 <Icon as={CiPaperplane} w={4} h={4} color="#D2001A" />
-                <Text color={"gray.600"} fontSize="md">{data}</Text>
+                <Text color={"gray.600"} fontSize="md">
+                  {data}
+                </Text>
               </HStack>
             ))}
           </Stack>
