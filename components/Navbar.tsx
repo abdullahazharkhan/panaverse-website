@@ -16,7 +16,6 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-  transition,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -27,7 +26,7 @@ import {
 import Image from "next/image";
 import { TbBrandGithub } from "react-icons/tb";
 import { motion } from "framer-motion";
-const Links = ["Courses", "About"];
+const Links = ["Courses", "PIAIC"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -111,9 +110,40 @@ export default function Navbar() {
               spacing={4}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <Link
+                px={2}
+                py={1}
+                rounded={"md"}
+                color="#D2001A"
+                fontWeight="semibold"
+                transition="0.25s ease"
+                _hover={{
+                  textDecoration: "none",
+                  bg: useColorModeValue("red.900", "red.700"),
+                  transition: "0.25s ease",
+                  color: "#EFEFEF",
+                }}
+                href={`/Courses`}
+              >
+                Available Courses
+              </Link>
+              <Link
+                px={2}
+                py={1}
+                rounded={"md"}
+                color="#D2001A"
+                fontWeight="semibold"
+                transition="0.25s ease"
+                _hover={{
+                  textDecoration: "none",
+                  bg: useColorModeValue("red.900", "red.700"),
+                  transition: "0.25s ease",
+                  color: "#EFEFEF",
+                }}
+                href={`https://www.piaic.org/`}
+              >
+                Visit PIAIC
+              </Link>
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
