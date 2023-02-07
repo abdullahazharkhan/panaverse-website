@@ -91,7 +91,7 @@ export default function Navbar() {
             >
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ type: "spring", duration: 3, bounce: 0.5 }}
+                transition={{ type: "spring", duration: 5, bounce: 0.6 }}
               >
                 <Link href="/">
                   <Image
